@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/navigation">
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation"
+            app:startDestination="@id/gistListFragment">
 
+    <fragment
+        android:id="@+id/gistListFragment"
+        android:name="com.ict.mito.mittohub.ui.list.GistListFragment"
+        android:label="GistListFragment">
+        <action
+            android:id="@+id/action_gistListFragment_to_postGistFragment"
+            app:destination="@id/postGistFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/postGistFragment"
+        android:name="com.ict.mito.mittohub.ui.post.PostGistFragment"
+        android:label="PostGistFragment"/>
 </navigation>
